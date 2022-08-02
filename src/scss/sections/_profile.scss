@@ -1,0 +1,68 @@
+@use "../custom" as *;
+@use "../mixin" as *;
+
+.profile {
+  @include card;
+  display: flex;
+  // flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-around;
+
+  @media (max-width: 478px) {
+    display: grid;
+  }
+
+  .image {
+    max-height: 10rem;
+    overflow: hidden;
+    border-radius: 20rem;
+    background: black;
+    width: fit-content;
+
+    img {
+      height: 10rem;
+      width: 10rem;
+      object-fit: cover;
+      border-radius: 20rem;
+      transition: 0.5s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .title {
+    // text-align: center;
+    padding-top: 1rem;
+    font-size: large;
+
+    h2,
+    h5 {
+      color: #ffc107;
+      font-family: "Permanent Marker", cursive;
+      letter-spacing: 0.3rem;
+
+      @media (max-width: 478px) {
+        font-size: inherit;
+      }
+    }
+
+    h5 {
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .info {
+    display: flex;
+    gap: 1rem;
+
+    .container {
+      text-align: center;
+    }
+  }
+}

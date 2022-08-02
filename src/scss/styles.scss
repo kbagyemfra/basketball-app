@@ -1,0 +1,37 @@
+@use "custom";
+
+// IMPORT COMPONENTS
+
+// @use "components/animations";
+// @use "components/button";
+// @use "components/mixin";
+// @use "components/typography";
+
+// IMPORT THE SECTIONS
+@use "sections/dashboard";
+@use "sections/header";
+@use "sections/sidebar";
+@use "sections/analysis";
+@use "sections/faqs";
+@use "sections/stats";
+@use "sections/transfers";
+@use "sections/footer";
+@use "sections/profile";
+@use "sections/selection";
+@use "sections/caption";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  //   color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
